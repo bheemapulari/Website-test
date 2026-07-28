@@ -1,1018 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brigade Plus | Bespoke Interior Design Services</title>
-    <meta name="description" content="Transform your Brigade home with tailor-made interior design services. 100% custom modular kitchens, wardrobes, smart automation, and guaranteed on-time handover.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --primary: #1A2B4C;
-            --primary-accent: #C5A059;
-            --secondary: #0F172A;
-            --accent-light: #F8F5EE;
-            --text-main: #334155;
-            --text-dark: #0F172A;
-            --text-light: #64748B;
-            --bg-light: #FAFAFA;
-            --white: #FFFFFF;
-            --border-color: #E2E8F0;
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
-            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
-            --shadow-lg: 0 16px 32px rgba(0,0,0,0.12);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+<meta charset="UTF-8">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-main);
-            background-color: var(--white);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-        }
+<title>Brigade Plus | Complete Home Solutions</title>
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+<meta name="description"
+content="Brigade Plus offers premium Interior Design, Rental, Resale and Lifestyle services.">
 
-        ul {
-            list-style: none;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-        /* Container */
-        .container {
-            width: 100%;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* Header / Navbar */
-        header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 80px;
-        }
+<link rel="stylesheet" href="assets/css/style.css">
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: -0.5px;
-        }
-
-        .logo-badge {
-            background: var(--primary-accent);
-            color: var(--white);
-            font-size: 11px;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 32px;
-        }
-
-        .nav-link {
-            font-size: 15px;
-            font-weight: 600;
-            color: var(--text-dark);
-            transition: var(--transition);
-        }
-
-        .nav-link:hover {
-            color: var(--primary-accent);
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 24px;
-            font-size: 15px;
-            font-weight: 600;
-            border-radius: var(--radius-sm);
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-accent);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            background-color: #b08d49;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-secondary {
-            background-color: var(--primary);
-            color: var(--white);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        /* Mobile Nav Menu Toggle */
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0 100px;
-            background: linear-gradient(135deg, #F8F9FA 0%, var(--accent-light) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-size: 48px;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .hero-content h1 span {
-            color: var(--primary-accent);
-        }
-
-        .hero-content p {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 32px;
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
-
-        .trust-badges {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(0,0,0,0.08);
-        }
-
-        .trust-item h4 {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .trust-item p {
-            font-size: 13px;
-            color: var(--text-light);
-            margin-bottom: 0;
-        }
-
-        .hero-card-preview {
-            background: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 16px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-
-        .hero-card-preview img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: var(--radius-md);
-        }
-
-        .hero-card-tag {
-            position: absolute;
-            bottom: 32px;
-            left: 32px;
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(8px);
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: var(--radius-sm);
-        }
-
-        .hero-card-tag h5 {
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .hero-card-tag p {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 0;
-        }
-
-        /* Section Styling */
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 60px;
-        }
-
-        .section-subtitle {
-            color: var(--primary-accent);
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            display: block;
-        }
-
-        .section-title {
-            font-size: 36px;
-            font-weight: 800;
-            color: var(--primary);
-            margin-bottom: 16px;
-        }
-
-        .section-description {
-            font-size: 16px;
-            color: var(--text-light);
-        }
-
-        /* Offerings / Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--primary-accent);
-        }
-
-        .service-img {
-            height: 220px;
-            width: 100%;
-            object-fit: cover;
-            background-color: #E2E8F0;
-        }
-
-        .service-body {
-            padding: 24px;
-        }
-
-        .service-body h3 {
-            font-size: 20px;
-            color: var(--primary);
-            margin-bottom: 12px;
-        }
-
-        .service-body p {
-            font-size: 14px;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        .service-link {
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--primary-accent);
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* Process Section */
-        .process-bg {
-            background-color: var(--bg-light);
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
-            position: relative;
-        }
-
-        .process-step {
-            background: var(--white);
-            padding: 24px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            position: relative;
-        }
-
-        .step-number {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--primary-accent);
-            opacity: 0.8;
-            margin-bottom: 12px;
-        }
-
-        .process-step h4 {
-            font-size: 16px;
-            color: var(--primary);
-            margin-bottom: 8px;
-        }
-
-        .process-step p {
-            font-size: 12px;
-            color: var(--text-light);
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 32px;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .stars {
-            color: #F59E0B;
-            margin-bottom: 16px;
-            font-size: 16px;
-        }
-
-        .testimonial-text {
-            font-size: 14px;
-            color: var(--text-main);
-            font-style: italic;
-            margin-bottom: 24px;
-        }
-
-        .user-profile {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: var(--primary-accent);
-            color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
-
-        .user-info h5 {
-            font-size: 15px;
-            color: var(--primary);
-        }
-
-        .user-info p {
-            font-size: 12px;
-            color: var(--text-light);
-        }
-
-        /* FAQ Accordion */
-        .faq-accordion {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            margin-bottom: 16px;
-            overflow: hidden;
-            background: var(--white);
-        }
-
-        .faq-header {
-            padding: 20px 24px;
-            font-weight: 700;
-            color: var(--primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--white);
-            transition: var(--transition);
-        }
-
-        .faq-header:hover {
-            background-color: var(--bg-light);
-        }
-
-        .faq-body {
-            padding: 0 24px 20px;
-            display: none;
-            color: var(--text-light);
-            font-size: 14px;
-        }
-
-        .faq-item.active .faq-body {
-            display: block;
-        }
-
-        .faq-item.active .faq-toggle-icon {
-            transform: rotate(180deg);
-        }
-
-        /* Contact & Lead Form */
-        .contact-section {
-            background: var(--primary);
-            color: var(--white);
-            border-radius: var(--radius-lg);
-            padding: 60px;
-            margin-bottom: 80px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .contact-info h2 {
-            font-size: 36px;
-            color: var(--white);
-            margin-bottom: 16px;
-        }
-
-        .contact-info p {
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 32px;
-        }
-
-        .lead-form {
-            background: var(--white);
-            padding: 32px;
-            border-radius: var(--radius-md);
-            color: var(--text-main);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-label {
-            display: block;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: var(--text-dark);
-        }
-
-        .form-input, .form-select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-sm);
-            font-size: 14px;
-            outline: none;
-        }
-
-        .form-input:focus, .form-select:focus {
-            border-color: var(--primary-accent);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-brand p {
-            color: #94A3B8;
-            font-size: 14px;
-            margin-top: 16px;
-            max-width: 300px;
-        }
-
-        .footer-column h5 {
-            font-size: 16px;
-            margin-bottom: 20px;
-            color: var(--white);
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: #94A3B8;
-            font-size: 14px;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #64748B;
-            font-size: 13px;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 1024px) {
-            .hero-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid, .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .hero-content h1 {
-                font-size: 32px;
-            }
-
-            .services-grid, .testimonials-grid, .process-steps {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-badges {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-section {
-                padding: 30px 20px;
-            }
-        }
-    </style>
 </head>
+
 <body>
 
-    <!-- Navigation Header -->
-    <header>
-        <div class="container navbar">
-            <a href="#" class="logo-container">
-                <span class="logo-text">BRIGADE<span style="color:var(--primary-accent)">+</span></span>
-                <span class="logo-badge">Interiors</span>
-            </a>
-            <nav class="nav-links">
-                <a href="#services" class="nav-link">Offerings</a>
-                <a href="#portfolio" class="nav-link">Recent Works</a>
-                <a href="#process" class="nav-link">Design Process</a>
-                <a href="#testimonials" class="nav-link">Reviews</a>
-                <a href="#faq" class="nav-link">FAQs</a>
-            </nav>
-            <div>
-                <a href="#contact" class="btn btn-primary">Book Consultation</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <h1>Bespoke Interiors Built for Your <span>Brigade Home</span></h1>
-                <p>Get factory-precision modular kitchens, custom wardrobes, and full turnkey interiors executed by Brigade's in-house design experts. 100% personalized to your lifestyle.</p>
-                
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Get Free Estimate</a>
-                    <a href="#portfolio" class="btn btn-outline">Explore Recent Works</a>
-                </div>
+<!-- ==========================
+NAVBAR
+========================== -->
 
-                <div class="trust-badges">
-                    <div class="trust-item">
-                        <h4>45 Days</h4>
-                        <p>Guaranteed Delivery</p>
-                    </div>
-                    <div class="trust-item">
-                        <h4>10 Years</h4>
-                        <p>Material Warranty</p>
-                    </div>
-                    <div class="trust-item">
-                        <h4>2,500+</h4>
-                        <p>Homes Delivered</p>
-                    </div>
-                </div>
-            </div>
+<header>
 
-            <div class="hero-card-preview">
-                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=80" alt="Brigade Sanctuary Living Room Design">
-                <div class="hero-card-tag">
-                    <h5>Brigade Sanctuary 3 BHK</h5>
-                    <p>Contemporary Minimalist Design Handover</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav class="navbar">
 
-    <!-- Services / Offerings -->
-    <section class="section" id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Tailored Solutions</span>
-                <h2 class="section-title">Our Interior Offerings</h2>
-                <p class="section-description">From precision engineering in kitchens to smart climate control, explore our turnkey interior design offerings.</p>
-            </div>
+<div class="container">
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Modular Kitchen" class="service-img">
-                    <div class="service-body">
-                        <h3>Modular Kitchens</h3>
-                        <p>Ergonomic, anti-scratch finishes with soft-close German hardware and customized storage solutions.</p>
-                        <a href="#contact" class="service-link">Request Kitchen Quote &rarr;</a>
-                    </div>
-                </div>
+<a href="#" class="logo">
 
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80" alt="Custom Wardrobes" class="service-img">
-                    <div class="service-body">
-                        <h3>Custom Wardrobes</h3>
-                        <p>Floor-to-ceiling sliding & hinged wardrobes with integrated LED lights and modular internal organizers.</p>
-                        <a href="#contact" class="service-link">View Wardrobe Catalog &rarr;</a>
-                    </div>
-                </div>
+<img src="assets/images/logo.png" alt="Brigade Plus">
 
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80" alt="Living Space Design" class="service-img">
-                    <div class="service-body">
-                        <h3>Full Home Interiors</h3>
-                        <p>Complete transformation including false ceilings, accent walls, custom TV units, and ambient lighting.</p>
-                        <a href="#contact" class="service-link">Get Full Home Estimate &rarr;</a>
-                    </div>
-                </div>
+</a>
 
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=600&q=80" alt="Smart Home Automation" class="service-img">
-                    <div class="service-body">
-                        <h3>Smart Home Solutions</h3>
-                        <p>App-controlled ambient lighting, automated window drapes, and smart security sensors integrated seamlessly.</p>
-                        <a href="#contact" class="service-link">Explore Smart Automation &rarr;</a>
-                    </div>
-                </div>
+<ul class="nav-menu">
 
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Cooling Services" class="service-img">
-                    <div class="service-body">
-                        <h3>Cooling & HVAC Services</h3>
-                        <p>Concealed VRV/VRF air conditioning piping and ductwork executed before interior handover.</p>
-                        <a href="#contact" class="service-link">Inquire HVAC Services &rarr;</a>
-                    </div>
-                </div>
+<li><a href="#">Home</a></li>
 
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80" alt="Electrical & Lighting" class="service-img">
-                    <div class="service-body">
-                        <h3>Electrical & Designer Lighting</h3>
-                        <p>Architectural lighting design, mood-setting fixtures, and concealed safety wiring.</p>
-                        <a href="#contact" class="service-link">See Lighting Solutions &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<li><a href="#services">Services</a></li>
 
-    <!-- 5-Step Process -->
-    <section class="section process-bg" id="process">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">How We Work</span>
-                <h2 class="section-title">The Brigade Plus Process</h2>
-                <p class="section-description">A streamlined 5-step journey ensuring complete transparency, zero cost overruns, and on-time completion.</p>
-            </div>
+<li><a href="#">About</a></li>
 
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h4>Design Consultation</h4>
-                    <p>Meet our interior architects to discuss requirements, lifestyle preferences, and preliminary budget limits.</p>
-                </div>
+<li><a href="#">Projects</a></li>
 
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h4>3D Design & Sign-Off</h4>
-                    <p>Visualize your exact apartment layout in photorealistic 3D renders with chosen material samples.</p>
-                </div>
+<li><a href="#">Contact</a></li>
 
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h4>Factory Production</h4>
-                    <p>Precision manufacturing of modular units using German machinery for flawless edge-banding and durability.</p>
-                </div>
+</ul>
 
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h4>On-Site Installation</h4>
-                    <p>Dust-free, quiet installation managed by dedicated Brigade civil engineers and project managers.</p>
-                </div>
+<a href="#" class="btn-nav">
 
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <h4>Handover & Warranty</h4>
-                    <p>150-point quality check, deep cleaning, and formal delivery with a 10-year warranty certificate.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+Book Consultation
 
-    <!-- Testimonials -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Real Homeowners</span>
-                <h2 class="section-title">What Our Clients Say</h2>
-                <p class="section-description">Read genuine reviews from residents across Brigade Sanctuary, Utopia, Citadel, and WTC.</p>
-            </div>
+</a>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Though they promised a 60-day installation timeline, they completed the work within 40 days to accommodate our housewarming date! Deep cleaning was done prior to our puja."</p>
-                    <div class="user-profile">
-                        <div class="avatar">SA</div>
-                        <div class="user-info">
-                            <h5>Saurabh Anand</h5>
-                            <p>Brigade Utopia, Bangalore</p>
-                        </div>
-                    </div>
-                </div>
+<div class="hamburger">
 
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Our interior designer Hamsa translated our aesthetic preferences beautifully into the final design. The execution team was professional, attentive, and responsive throughout."</p>
-                    <div class="user-profile">
-                        <div class="avatar">HN</div>
-                        <div class="user-info">
-                            <h5>Hayagreev Narayan</h5>
-                            <p>Brigade WTC, Chennai</p>
-                        </div>
-                    </div>
-                </div>
+<span></span>
 
-                <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"Mr. Yadunand and the execution team made our vision a reality. Everyone who visits our home appreciates the high quality finish and factory precision."</p>
-                    <div class="user-profile">
-                        <div class="avatar">GR</div>
-                        <div class="user-info">
-                            <h5>Dr. G. Ramesh</h5>
-                            <p>Brigade Cornerstone Utopia</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<span></span>
 
-    <!-- FAQ Accordion -->
-    <section class="section process-bg" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Got Questions?</span>
-                <h2 class="section-title">Frequently Asked Questions</h2>
-            </div>
+<span></span>
 
-            <div class="faq-accordion">
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <span>01. What interior design services does Brigade Plus offer?</span>
-                        <span class="faq-toggle-icon">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Brigade Plus offers comprehensive turnkey interior solutions including modular kitchens, wardrobes, living room accent units, ceiling design, lighting, smart home automation, and AC ducting/cooling services.
-                    </div>
-                </div>
+</div>
 
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <span>02. How long does the interior installation take?</span>
-                        <span class="faq-toggle-icon">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Once 3D designs and material specifications are finalized, installation is guaranteed within 45 to 60 days.
-                    </div>
-                </div>
+</div>
 
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <span>03. What material warranty does Brigade Plus provide?</span>
-                        <span class="faq-toggle-icon">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        We provide up to a 10-year warranty on marine-grade plywood and premium hardware components against manufacturing defects and termite issues.
-                    </div>
-                </div>
+</nav>
 
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <span>04. Can I see material samples before booking?</span>
-                        <span class="faq-toggle-icon">▼</span>
-                    </div>
-                    <div class="faq-body">
-                        Yes! You can visit our Experience Centers or request a physical sample catalog during your initial design consultation.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</header>
 
-    <!-- Lead Capture Form Section -->
-    <section class="container" id="contact">
-        <div class="contact-section">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>Ready to Transform Your Brigade Home?</h2>
-                    <p>Book a free 1-on-1 consultation with our senior interior architects. Get personalized 3D layouts and transparent price estimates today.</p>
-                </div>
 
-                <form class="lead-form" onsubmit="event.preventDefault(); alert('Thank you! Our design team will contact you within 24 hours.');">
-                    <div class="form-group">
-                        <label class="form-label">Full Name</label>
-                        <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" required>
-                    </div>
 
-                    <div class="form-group">
-                        <label class="form-label">Phone Number</label>
-                        <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
-                    </div>
+<!-- ==========================
+HERO SECTION
+========================== -->
 
-                    <div class="form-group">
-                        <label class="form-label">Brigade Property Name</label>
-                        <input type="text" class="form-input" placeholder="e.g. Brigade Sanctuary / Utopia" required>
-                    </div>
+<section class="hero">
 
-                    <div class="form-group">
-                        <label class="form-label">Apartment Configuration</label>
-                        <select class="form-select">
-                            <option>2 BHK</option>
-                            <option>3 BHK</option>
-                            <option>4 BHK / Penthouse</option>
-                        </select>
-                    </div>
+<div class="overlay"></div>
 
-                    <button type="submit" class="btn btn-secondary" style="width: 100%;">Book Free Consultation</button>
-                </form>
-            </div>
-        </div>
-    </section>
+<div class="hero-content">
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <span class="logo-text" style="color:var(--white)">BRIGADE<span style="color:var(--primary-accent)">+</span></span>
-                    <p>Official interior design vertical of Brigade Group. Delivering bespoke, turnkey home interiors with precision engineering and zero hassle.</p>
-                </div>
+<span>
 
-                <div class="footer-column">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="#services">Offerings</a></li>
-                        <li><a href="#portfolio">Recent Projects</a></li>
-                        <li><a href="#process">Design Process</a></li>
-                        <li><a href="#faq">FAQs</a></li>
-                    </ul>
-                </div>
+COMPLETE HOME SOLUTIONS
 
-                <div class="footer-column">
-                    <h5>Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#services">Modular Kitchens</a></li>
-                        <li><a href="#services">Custom Wardrobes</a></li>
-                        <li><a href="#services">Smart Homes</a></li>
-                        <li><a href="#services">Cooling & HVAC</a></li>
-                    </ul>
-                </div>
+</span>
 
-                <div class="footer-column">
-                    <h5>Contact</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Support Portal</a></li>
-                        <li><a href="#">Warranty Terms</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-            </div>
+<h1>
 
-            <div class="copyright">
-                © 2026 Brigade Enterprises Ltd. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+One Brand.
 
-    <!-- Interactive JS for Accordion -->
-    <script>
-        document.querySelectorAll('.faq-header').forEach(header => {
-            header.addEventListener('click', () => {
-                const item = header.parentElement;
-                item.classList.toggle('active');
-            });
-        });
-    </script>
-</body>
-</html>
+<br>
+
+Four Premium Services.
+
+</h1>
+
+<p>
+
+Whether you're designing your dream home,
+
+renting your property,
+
+selling your apartment,
+
+or looking for lifestyle services,
+
+Brigade Plus brings everything together under one trusted platform.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#services" class="primary-btn">
+
+Explore Services
+
+</a>
+
+<a href="interiors/index.html" class="secondary-btn">
+
+Explore Interiors
+
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll">
+
+Scroll Down
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==========================
+FEATURED SERVICE
+========================== -->
+
+<section class="featured">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>FEATURED</span>
+
+<h2>
+
+Brigade Plus Interiors
+
+</h2>
+
+<p>
+
+Crafting beautiful homes with factory precision,
+
+premium materials and exceptional customer experience.
+
+</p>
+
+</div>
+
+<div class="featured-card">
+
+<div class="featured-left">
+
+<h3>
+
+Luxury Interiors
+
+for Modern Living
+
+</h3>
+
+<p>
+
+✔ Modular Kitchens
+
+</p>
+
+<p>
+
+✔ Wardrobes
+
+</p>
+
+<p>
+
+✔ TV Units
+
+</p>
+
+<p>
+
+✔ False Ceiling
+
+</p>
+
+<p>
+
+✔ Smart Home Automation
+
+</p>
+
+<p>
+
+✔ Lighting
+
+</p>
+
+<a href="interiors/index.html"
+
+class="explore-btn">
+
+Explore Interiors →
+
+</a>
+
+</div>
+
+<div class="featured-right">
+
+<img src="assets/images/interior-hero.jpg"
+
+alt="Luxury Interior">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ==========================
+SERVICES
+========================== -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>OUR SERVICES</span>
+
+<h2>
+
+Choose Your Service
+
+</h2>
+
+<p>
+
+Everything you need for your home under one roof.
+
+</p>
+
+</div>
+
+<div class="service-grid">
